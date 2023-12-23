@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Website Pribadi Saya</title>
+    <style>
+        .dialog {
+  display: none; /* Sembunyikan dialog box secara default */
+  position: fixed; /* Posisikan dialog box secara fixed */
+  z-index: 1; /* Tempatkan dialog box di atas elemen lain */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Tambahkan scrollbar jika konten melebihi ukuran dialog box */
+  background-color: rgba(0, 0, 0, 0.4); /* Background semi-transparan */
+}
+
+.dialog-content {
+  background-color: #fff;
+  margin: 15% auto; /* Posisikan konten di tengah secara horizontal */
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%; /* Atur lebar konten */
+}
+
+#close-dialog {
+  background-color: #f44336; /* Warna merah untuk tombol tutup */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- Menu Navigasi -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#profil">Profil</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+            <li><a href="#open-dialog">Dialog Box</a></li>
+        </ul>
+    </nav>
+
+    <!-- Halaman Home -->
+    <section id="home">
+        <h1>Hallo All.. Selamat Datang di Website Kencana</h1>
+        <p>Selamat datang di website pribadi Kencana. Aku adalah penari, dengan menari aku bisa mengekspresikan rasa sedih, senang, bahagia. Aku ingin menjadi penari hebat 
+    </section>
+
+    <!-- Halaman Profil -->
+    <section id="profil">
+        <h2>Profil Saya</h2>
+        <p>Saya lahir di Cirebon pada 24 Januari 2004, saya tinggal di Karawaci.</p>
+    </section>
+
+    <!-- Halaman About -->
+    <section id="about">
+        <h2>Tentang Saya</h2>
+        <p>Informasi lebih lanjut tentang minat, hobi, dan hal-hal yang saya sukai.</p>
+    </section>
+
+    <!-- Halaman Gallery -->
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <p>Beberapa gambar dan video yang saya bagikan di sini:</p>
+        <img src="c:\Users\SCB\Downloads\foto untuk di github.jpeg" alt="Gambar 1" />
+        <video width="320" height="240" controls>
+            
+            <source src="d:\Pictures\Camera Roll\WIN_20220608_11_46_46_Pro.jpg" type="video/mp4">
+            Maaf, browser Anda tidak mendukung tag video.
+        </video>
+    </section>
+
+    <!-- Halaman Kontak -->
+    <section id="kontak">
+        <h2>Kontak</h2>
+        <p>Silakan hubungi saya melalui email: <a href="mailto:Dewikencana24@gmail.com">nama@email.com</a></p>
+    </section>
+    <!-- Dialog Box -->
+    <h1>
+        Tekan Tombol Ini !!
+    </h1>
+      <button id="open-dialog" type="button" class="btn btn-primary">Buka Dialog</button>
+    
+      <div id="dialog" class="dialog">
+        <div class="dialog-content">
+          <h2>HALO SAYA DEWI</h2>
+          <p>Terimakasih Sudah Mampir</p>
+          <button id="close-dialog">Tutup</button>
+        </div>
+      </div>
+
+      <script>
+            
+            const dialog = document.getElementById('dialog');
+            const openButton = document.getElementById('open-dialog');
+            const closeButton = document.getElementById('close-dialog');
+
+            openButton.addEventListener('click', () => {
+                dialog.style.display = 'block'; /* Tampilkan dialog box */
+            });
+
+            closeButton.addEventListener('click', () => {
+                dialog.style.display = 'none'; /* Sembunyikan dialog box */
+            });
+      </script>
+</body>
+
+</html>
